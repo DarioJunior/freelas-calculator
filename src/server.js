@@ -19,6 +19,11 @@ server.use(express.static('public'));
 //   return res.sendFile(__dirname + '/views/index.html');
 // })
 
+// 16º Habilitar o Body da Requisição  >>>
+server.use(express.urlencoded({ extended: true }))
+
+
+
 //11º Passo usar as Rotas
 server.use(routes);
 
